@@ -240,7 +240,7 @@ namespace CalculatorProject
 
                 while (berekening.Length > eindPositieGetal2 && IsOperator(berekening[index]))
                 {
-                    eindPositieGetal2++;
+                    eindPositieGetal2 = berekening.Length;
                 }
 
                 string getal2 = berekening.Substring(berekening.IndexOf(teken)+1, index); //hoeveel karakters ipv lengte vd string
@@ -307,7 +307,7 @@ namespace CalculatorProject
 
         private void Button18_Click(object sender, EventArgs e)
         {
-            Calculation = " ";
+            Calculation = "";
             textBox1.Text = Calculation;
         }
     }
